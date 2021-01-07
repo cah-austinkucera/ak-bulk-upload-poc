@@ -1,0 +1,18 @@
+<div>
+    <div> Please set the invoice number and then upload all related claims.</div>
+
+    <br/>
+    <label for="invoice">Invoice Number:</label>
+    <!-- <input type="text" id="invoice" name="invoice"> -->
+    <input type="text" id="invoice" name="invoice" [(ngModel)]="invoice">
+    
+    <br/>
+    <br/>
+    <label for="claims">Claims</label>
+    <input id="claims" type="file" />
+    
+    <br/>
+    <br/>
+    <button type="button" (click)="onClickMe()">Upload!</button>
+
+</div>
