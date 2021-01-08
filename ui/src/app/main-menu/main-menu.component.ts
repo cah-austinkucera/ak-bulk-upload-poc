@@ -15,9 +15,17 @@ export class MainMenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  upload(){
-    console.log("clicked " + this.invoice)
+  submit(){
     this.parseFile()
+  }
+
+  upload(excelData: any){
+    const postBody = {
+      invoice: this.invoice,
+      claims: excelData
+    }
+    console.log(postBody)
+    //TODO - we'd post to the backend here
   }
 
   onFileChange(event: any) {
@@ -29,8 +37,7 @@ export class MainMenuComponent implements OnInit {
     this.excelFile = target.files[0]
   }
 
-  parseFile() {
-    console.log(this.excelFile)
+  parseFile() {    
     const reader: FileReader = new FileReader();
     reader.readAsBinaryString(this.excelFile);
     reader.onload = (e: any) => {
@@ -44,7 +51,10 @@ export class MainMenuComponent implements OnInit {
 
       /* save data */
       const data = XLSX.utils.sheet_to_json(ws); // to get 2d array pass 2nd parameter as object {header: 1}
-      console.log(data); // Data will be logged in array format containing objects
+      // console.log(data); // Data will be logged in array format containing objects
+
+      const excelData = data.map(row => (row as any)["Claim Ids"])
+      this.upload(excelData)      
     };
  }
 
