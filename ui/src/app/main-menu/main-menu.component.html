@@ -3,16 +3,16 @@
 
     <br/>
     <label for="invoice">Invoice Number:</label>
-    <!-- <input type="text" id="invoice" name="invoice"> -->
     <input type="text" id="invoice" name="invoice" [(ngModel)]="invoice">
     
     <br/>
     <br/>
     <label for="claims">Claims</label>
-    <input id="claims" type="file" />
+    <input id="claims" type="file" (change)="onFileChange($event)"/>
+    <!-- <input id="claims" type="file" [(ngModel)]="excelFile"/> -->
     
     <br/>
     <br/>
-    <button type="button" (click)="onClickMe()">Upload!</button>
+    <button type="button" (click)="upload()">Upload!</button>
 
 </div>
