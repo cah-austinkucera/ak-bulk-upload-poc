@@ -1,18 +1,29 @@
 <div>
-    <div> Please set the invoice number and then upload all related claims.</div>
+    <div> Please set the status to set and then upload all related claims.</div>
 
-    <br/>
-    <label for="invoice">Invoice Number:</label>
-    <input type="text" id="invoice" name="invoice" [(ngModel)]="invoice">
-    
-    <br/>
-    <br/>
-    <label for="claims">Claims</label>
-    <input id="claims" type="file" (change)="onFileChange($event)"/>
-    <!-- <input id="claims" type="file" [(ngModel)]="excelFile"/> -->
-    
     <br/>
     <br/>
     <button type="button" (click)="submit()">Upload!</button>
+    <br/>
+    <br/>
+    <label for="invoice">Status:</label>
+    <!-- <input type="text" id="invoice" name="invoice" [(ngModel)]="invoice"> -->
+    <select name="status" id="status">
+        <option value="approved">Approved</option>
+        <option value="canceled">Canceled</option>
+        <option value="resubmit">Review and Resubmit</option>
+      </select>
 
+    <br/>
+    <br/>
+    <label for="claims">Claims</label>
+    <br/>
+    <!-- <input id="claims" type="file" (change)="onFileChange($event)"/> -->
+    <textarea i rows="50" cols="100">
+        123
+        34234 
+        234234 
+        234 
+    </textarea>
+    
 </div>
