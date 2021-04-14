@@ -1,18 +1,38 @@
 <div>
     <div> Please set the status to set and then upload all related claims.</div>
-
+    <marquee>Wammer Slammer</marquee>
     <br/>
     <br/>
     <button type="button" (click)="submit()">Upload!</button>
     <br/>
     <br/>
-    <label for="invoice">Status:</label>
+    <label for="invoice">Status:</label><br>
     <!-- <input type="text" id="invoice" name="invoice" [(ngModel)]="invoice"> -->
     <select name="status" id="status">
         <option value="approved">Approved</option>
         <option value="canceled">Canceled</option>
         <option value="resubmit">Review and Resubmit</option>
       </select>
+      <br/><br/>
+
+      Reason Category (Claim Type):
+      <br/>
+      <select>
+          <option value="1">Cost Effective Alternative</option>
+          <option value="2">Needs Refill</option>
+          <option value="3">Needs Lab Monitoring</option>
+      </select>
+
+      <br><br>
+      Reason:<br>
+      <select name="status" id="status">
+        <option value="1">Not a good call</option>
+        <option value="2">All ready and setup</option>
+        <option value="3">Needs more love</option>
+    </select>
+    OR New Reason:
+    <input type="text"><br><br>
+
 
     <br/>
     <br/>
