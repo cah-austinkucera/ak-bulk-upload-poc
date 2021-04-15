@@ -1,6 +1,5 @@
 <div>
     <div> Please set the status to set and then upload all related claims.</div>
-    <marquee>Wammer Slammer</marquee>
     <br/>
     <br/>
     <button type="button" (click)="submit()">Upload!</button>
@@ -31,19 +30,28 @@
         <option value="3">Needs more love</option>
     </select>
     OR New Reason:
-    <input type="text"><br><br>
-
+    <input type="text">
+    <input type="checkbox"> Save this Reason to list of reasons
+    <br><br>
 
     <br/>
+    Selected Reason: 
+    <br/>
+    <textarea i rows="5" cols="50">
+This is a super long explanation of why this status happens etc
+
+    </textarea>
+
+    
     <br/>
     <label for="claims">Claims</label>
     <br/>
     <!-- <input id="claims" type="file" (change)="onFileChange($event)"/> -->
     <textarea i rows="50" cols="100">
-        123
-        34234 
-        234234 
-        234 
+123
+34234 
+234234 
+234 
     </textarea>
     
 </div>
